@@ -8,11 +8,17 @@ import { Observable } from 'rxjs';
 })
 export class GetGifsService {
 
-  baseUrl: string = `https://api.giphy.com/v1/gifs/trending?api_key=${environment.apiKey}&limit=25`
+  trendingUrl: string = `https://api.giphy.com/v1/gifs/trending?api_key=${ environment.apiKey }&limit=25`
+  
+  searchUrl: string = `https://api.giphy.com/v1/gifs/search?api_key=${ environment.apiKey }&q=`
 
   constructor ( private http: HttpClient ) { }
   
   getTrendingGifs (): Observable<Object> {
-    return this.http.get(this.baseUrl)
+    return this.http.get(this.trendingUrl)
+  }
+
+  searchGif (word: string): Observable<Object> {
+    return this.http.get(this.searchUrl+ word)
   }
 }

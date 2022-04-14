@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './Shared/material/material.module';
 import { GifGridComponent } from './Components/gif-grid/gif-grid.component';
 import { GifComponent } from './Components/gif/gif.component';
+import { SearchComponent } from './Components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GifGridComponent,
-    GifComponent
+    GifComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,20 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.spacer {
+    display: flex;
+}
+
+mat-form-field {
+    margin-top: 1rem;
+    min-width: 50%;
+}
+
+button {
+    height: 3rem;
+    margin-left: 1rem;
+}
