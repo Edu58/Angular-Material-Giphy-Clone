@@ -1,5 +1,8 @@
-<mat-grid-list cols="3">
-    <mat-grid-tile>
-        <app-gif></app-gif>
+<mat-grid-list cols="4">
+    <button mat-raised-button color="warn" (click)="getGifs()">Load</button>
+    <mat-grid-tile *ngFor="let gif of gifs">
+        <app-gif
+        [imageUrl]="gif"
+        ></app-gif>
     </mat-grid-tile>
 </mat-grid-list>

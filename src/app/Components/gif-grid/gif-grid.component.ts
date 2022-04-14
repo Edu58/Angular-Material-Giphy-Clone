@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs';
+import { GetGifsService } from 'src/app/Services/get-gifs.service';
 
 @Component({
   selector: 'app-gif-grid',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GifGridComponent implements OnInit {
 
-  constructor() { }
+  gifs: any= []
 
-  ngOnInit(): void {
+  constructor(private api: GetGifsService) { }
+
+  ngOnInit (): void {
+    
+  }
+
+  getGifs () {
+    this.api.getTrendingGifs().subscribe( ( data: any ): void => {
+      data.data.map((oneGif: any) => this.gifs.push(oneGif.images.fixed_height.url))
+    } )
+    console.log(this.gifs)
   }
 
 }
