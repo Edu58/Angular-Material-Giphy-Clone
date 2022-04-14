@@ -10,25 +10,24 @@ import { GetGifsService } from 'src/app/Services/get-gifs.service';
 export class GifGridComponent implements OnInit {
 
   gifs: any = []
-  searchResponse: any
 
   constructor(private api: GetGifsService) { }
 
   ngOnInit (): void {
-    
-  }
-
-  getGifs () {
     this.api.getTrendingGifs().subscribe( ( data: any ): void => {
-      data.data.map((oneGif: any) => this.gifs.push(oneGif.images.fixed_height.url))
+      data.data.map( ( oneGif: any ) => {
+        this.gifs.push( oneGif.images.fixed_height.url )
+      } )
     } )
-    console.log(this.gifs)
   }
 
-  receiveSearchData (event: any) {
-    this.searchResponse = event
-
-    console.log(this.searchResponse)
+  receiveSearchData ( event: any ) {
+    // console.log(event[0].images.fixed_height.url)
+    this.gifs.splice(0, this.gifs.length)
+    
+    event.map( (data: any) => {
+      this.gifs.push( data.images.fixed_height.url )
+    })
   }
 
 }

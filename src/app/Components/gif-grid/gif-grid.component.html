@@ -1,6 +1,5 @@
 <mat-grid-list cols="4">
      <app-search (searchData)="receiveSearchData($event)"></app-search>
-    <button mat-raised-button color="warn" (click)="getGifs()">Load</button>
     <mat-grid-tile *ngFor="let gif of gifs">
         <app-gif
         [imageUrl]="gif"
