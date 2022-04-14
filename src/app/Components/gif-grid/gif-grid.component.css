@@ -1,3 +1,7 @@
 button {
   margin: 1rem 2rem;
 }
+
+.warning {
+    text-align: center;
+}

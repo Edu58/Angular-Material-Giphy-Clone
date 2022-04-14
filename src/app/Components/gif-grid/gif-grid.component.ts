@@ -14,11 +14,11 @@ export class GifGridComponent implements OnInit {
   constructor(private api: GetGifsService) { }
 
   ngOnInit (): void {
-    this.api.getTrendingGifs().subscribe( ( data: any ): void => {
-      data.data.map( ( oneGif: any ) => {
-        this.gifs.push( oneGif.images.fixed_height.url )
-      } )
-    } )
+    // this.api.getTrendingGifs().subscribe( ( data: any ): void => {
+    //   data.data.map( ( oneGif: any ) => {
+    //     this.gifs.push( oneGif.images.fixed_height.url )
+    //   } )
+    // } )
   }
 
   receiveSearchData ( event: any ) {
