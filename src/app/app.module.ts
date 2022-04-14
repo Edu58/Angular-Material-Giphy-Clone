@@ -10,13 +10,16 @@ import { MaterialModule } from './Shared/material/material.module';
 import { GifGridComponent } from './Components/gif-grid/gif-grid.component';
 import { GifComponent } from './Components/gif/gif.component';
 import { SearchComponent } from './Components/search/search.component';
+import { AboutComponent } from './Components/about/about.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     GifGridComponent,
     GifComponent,
-    SearchComponent
+    SearchComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { SearchComponent } from './Components/search/search.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

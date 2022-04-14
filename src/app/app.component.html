@@ -1,7 +1,8 @@
 <mat-toolbar color="primary">
-  <span>Giphy Clone</span>
+  <span class="brand">Giphy Clone</span>
+  <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="reload()">home</mat-icon>
   <span class="spacer"></span>
-  <span>About</span>
+  <button mat-stroked-button (click)="openDialog()">About</button>
 </mat-toolbar>
 
 <div class="container">
