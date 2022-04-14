@@ -1,8 +1,8 @@
 <div class="container">
-    <form>
+    <form #form="ngForm" (ngSubmit)="searchGif(form)">
         <mat-form-field appearance="outline">
           <mat-label>Enter a word</mat-label>
-          <input matInput>
+          <input matInput name="word" required="true" ngModel>
         </mat-form-field>
         <button mat-raised-button color="warn" type="submit">search</button>
     </form>

@@ -9,7 +9,8 @@ import { GetGifsService } from 'src/app/Services/get-gifs.service';
 })
 export class GifGridComponent implements OnInit {
 
-  gifs: any= []
+  gifs: any = []
+  searchResponse: any
 
   constructor(private api: GetGifsService) { }
 
@@ -22,6 +23,12 @@ export class GifGridComponent implements OnInit {
       data.data.map((oneGif: any) => this.gifs.push(oneGif.images.fixed_height.url))
     } )
     console.log(this.gifs)
+  }
+
+  receiveSearchData (event: any) {
+    this.searchResponse = event
+
+    console.log(this.searchResponse)
   }
 
 }

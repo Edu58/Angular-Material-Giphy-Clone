@@ -10,7 +10,7 @@ export class GetGifsService {
 
   trendingUrl: string = `https://api.giphy.com/v1/gifs/trending?api_key=${ environment.apiKey }&limit=25`
   
-  searchUrl: string = `https://api.giphy.com/v1/gifs/search?api_key=${ environment.apiKey }&q=`
+  searchUrl: string = `https://api.giphy.com/v1/gifs/search?api_key=${ environment.apiKey }&limit=30&q=`
 
   constructor ( private http: HttpClient ) { }
   
