@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 It uses Angular Material for the UI and the Giphy API as the data source.
 
 ## Screenshot
-![](src/app/assets/localhost_4200_.png)
+![](src/assets/localhost_4200_.png)
 
 ## Development server
 
