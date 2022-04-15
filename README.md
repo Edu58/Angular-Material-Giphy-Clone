@@ -1,6 +1,7 @@
 # AngularMaterialGiphyClone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+It uses Angular Material for the UI and the Giphy API as the data source.
 
 ## Development server
 
